@@ -1,0 +1,48 @@
+//java program of using return statement
+
+class ReturnSt
+{
+  public static void main(String args[])
+  {
+   printMessage();
+   
+   add(2,5);
+   
+   int SUM=sum(5,4);
+   System.out.println("Summation is: "+SUM);
+   
+   //String shouting=capt("how are you");
+  }
+  
+  public static void printMessage()
+  {
+   System.out.println("this is neeraj");
+  }
+  
+  public static void add(int a, int b)
+  {
+   System.out.println("Addition is: "+(a+b));
+  }
+  
+  public static int sum(int a,int b)
+  {
+   return a+b;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+  
+     
