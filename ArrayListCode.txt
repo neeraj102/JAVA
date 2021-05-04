@@ -1,0 +1,67 @@
+
+         
+import java.util.ArrayList;
+
+class MyArrayList
+{
+    public static void main(String args[])
+    {
+        ArrayList<String> fruits=new ArrayList<>();
+        
+        //add Elements
+        fruits.add("Apple");
+        fruits.add("Guava");
+        fruits.add("Orange");
+        
+        
+        System.out.println("Elements of Arraylist: "+fruits);  //print elements of arraylist 
+        System.out.println("Size of ArrayList: "+fruits.size());  //find size of Arraylist
+        
+        String arr[]=new String[fruits.size()]; //create an array 
+        fruits.toArray(arr);  //pass that array as argument 
+        
+        for(String e:arr)   //print using for-each loop 
+        {
+            System.out.print(" "+e);
+        }
+        System.out.println();
+
+        ArrayList<String> vegitables=new ArrayList<>();
+        vegitables.add("Tomato");
+        vegitables.add("Potato");
+        vegitables.add("Carrot");
+        
+        fruits.addAll(vegitables);  //Add all elements of vegitables into fruits
+        System.out.println("Elements of Arraylist: "+fruits);  //print elements of arraylist 
+        
+        System.out.println("Element at index 1: "+fruits.get(1));
+        
+        fruits.set(1,"Banana"); //update element of index position 1
+        System.out.println("Elements of Arraylist: "+fruits); //Updated arralist 
+        
+        fruits.remove(2); //remove element of index 2 from list 
+        System.out.println("Elements of Arraylist: "+fruits);  //arraylist after removing element
+        
+        System.out.println(fruits.contains("Apple")); //checks Apple is present in list or not
+        System.out.println(fruits.isEmpty()); //checks list is empty or not
+
+
+
+
+        ArrayList<String> toRemove=new ArrayList<>();
+        toRemove.add("Apple");
+        toRemove.add("Potato");
+        
+        fruits.removeAll(toRemove);
+        System.out.println("Elements after removing elements: "+fruits);
+        
+    
+        fruits.clear();
+        System.out.println("Elements after clearing all elements: "+fruits);
+        
+        
+        
+        
+        
+    }
+}
