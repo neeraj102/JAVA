@@ -1,0 +1,21 @@
+//Create StringBuffer --- types of StringBuffer() constructor 
+//StringBuffer() constructor creates an empty string buffer 
+//StringBuffer(String s) constructor creates a string buffer with specified string 
+//StringBuffer(int capacity) constructor creates a string buffer with specified capacity 
+class StrBuff 
+{
+    public static void main(String args[])
+    {
+        //1. StringBuffer() constructor 
+        StringBuffer sb1 = new StringBuffer();   
+        System.out.println(sb1);
+        
+        //2. StringBuffer(String str)
+        StringBuffer sb2 = new StringBuffer("hello");
+        System.out.println(sb2);
+        
+        //3. StringBuffer(int capacity)
+        StringBuffer sb3 = new StringBuffer(6);
+        System.out.println(sb3.capacity());
+    }
+}

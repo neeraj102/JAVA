@@ -1,0 +1,22 @@
+//find sum of numbers present in string 
+
+class SumOfIntegerOfString {
+	public static void main (String[] args) 
+	{
+       String str="neeraj10dheeraj20satish10sahil20";
+       str = str.replaceAll("[^\\d]"," ");//replace non-numeric digit with space 
+       str = str.replaceAll("\\s+"," "); //replace continuous spaces with single space 
+       str = str.strip();               //remove leading & trailing spaces 
+       
+       String arr[] = str.split(" ");  //convert string into arr of substring 
+       
+       int sum=0;
+       for(int i=0;i<arr.length;i++)
+       sum = sum + Integer.parseInt(arr[i]);
+       
+       System.out.println(sum);
+       
+       
+		
+	}
+}

@@ -1,0 +1,38 @@
+//Create Stack 
+
+import java.util.Stack;
+class Stk 
+{
+    public static void main(String args[])
+    {
+        Stack<Integer> stk = new Stack<>();
+        
+        stk.push(10);
+        stk.push(20);
+        stk.push(30);
+        stk.push(40);
+        stk.push(50);
+         //we can use add() instead of push()
+        
+        System.out.println("Element of stack: "+stk);
+        
+        //empty()- check stack is empty or not(also can use isEmpty()) 
+        boolean result = stk.empty();
+        System.out.println("Is stack empty ? "+result);
+        
+        //pop()- remove element 
+        int popped = stk.pop();
+        System.out.println("Removed element of stack is: "+popped);
+        System.out.println("Element of stack: "+stk);
+        
+        //peek()- find element on top of stack 
+        int temp = stk.peek();
+        System.out.println("Element on top of stack: "+temp);
+        
+        //size()- find location of element 
+        int location = stk.search(30);
+        System.out.println("Location of 30 is: "+location);
+        
+        System.out.println("Size of stack is: "+stk.size());
+    }
+}

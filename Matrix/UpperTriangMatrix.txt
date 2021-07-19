@@ -1,0 +1,32 @@
+//Find Upper triangular matrix :
+//Upper triangular matrix is square matrix in which all elements below the principal diagonal are zero  
+
+class UpprTrMatrix 
+{
+    public static void main(String args[])
+    {
+        int mat[][]={{1,2,3},{4,5,6},{7,8,9}};
+        int rows=mat.length;
+        int cols=mat[0].length;
+        
+        //1 check square matrix
+        if(rows!=cols)
+        {
+            System.out.println("Matrix should be square matrix");
+        }
+        else
+        {
+            for(int i=0;i<rows;i++)
+            {
+               for(int j=0;j<cols;j++)
+               {
+                   if(j<i)                      //If row number is greater than column number then set values of element as zero
+                       System.out.print("0 ");
+                     else 
+                       System.out.print(mat[i][j]+" ");
+               }
+               System.out.println();
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+//Array is called "array of values" 
+//Matrix is called "array of arrays"
+//Matrix is collection of numbers arranged in rows and columns
+//To represent matrix we use two dimensional array 
+//Sysntax: int arr[][] = new int[rows][columns];
+//In matrix we use two for lopps: 1st for loop for rows and 2nd for loop for columns 
+
+import java.util.Scanner;
+class Matrix 
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        
+        int rows=0,cols=0;
+        
+        rows=sc.nextInt(); //take input number of rows and columns 
+        cols=sc.nextInt();
+        
+        //Create matrix / 2D array 
+        int arr[][] = new int[rows][cols];
+        
+        for(int i=0;i<rows;i++)
+        {
+            for(int j=0;j<cols;j++)
+            {
+                arr[i][j]=sc.nextInt();    //take input values of matrix 
+            }
+        }
+        
+        for(int i=0;i<rows;i++)
+        {
+            for(int j=0;j<cols;j++)
+            {
+                System.out.print(arr[i][j]+" ");
+            }
+               System.out.println();
+        }
+        
+        
+        
+    }
+}
+
+

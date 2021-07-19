@@ -1,0 +1,64 @@
+//Create  linkedlist  and perform all functions
+
+import java.util.*;
+class Link
+{
+    public static void main(String args[])
+    {
+        List<String> ll=new LinkedList<>();
+        ll.add("Neeraj");
+        ll.add("Neeraj");
+        ll.add("Neeraj");
+        ll.add("Neeraj");
+        
+        System.out.println(ll);
+        ll.add(0,"Dheeraj");
+        System.out.println(ll);
+        ll.add(3,"Ravi");
+        
+        System.out.println(ll);
+        
+        ll.set(0,"shashi");
+        System.out.println(ll);
+        
+        ll.remove(1);
+        System.out.println(ll);
+        
+        System.out.println(ll.size());
+        
+        System.out.println(ll.get(0));
+        
+        System.out.println("Check linkedlist is empty or not : "+ll.isEmpty());
+        
+        //Convert linkedlist into array- to convert into array first create an array 
+        //  of linkedlist size then put that array into toArray() method.
+        
+        String temp[]=new String[ll.size()];
+        ll.toArray(temp);
+        
+        for(int i=0;i<temp.length;i++)
+        {
+            System.out.print(temp[i]+" ");
+        }
+        System.out.println();
+        
+        
+        //create another linked list and add that linkedlist into previous linkedlist
+        List<String> ls= new LinkedList<>();
+        ls.add("mango");
+        ls.add("orange");
+        ls.add("guava");
+        ls.add("graps");
+        
+        //now add this 'ls' LinkedList into 'll' linkedlist
+        ll.addAll(ls);
+        System.out.println(ll);
+        
+          //remove all elements of linkedlist 
+        ll.clear();
+        System.out.println(ll);
+        
+        
+        
+    }
+}

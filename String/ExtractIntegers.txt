@@ -1,0 +1,22 @@
+//extract integers from string 
+//input: "neeraj12dheeraj40satish50"
+//output: 12 40 50 
+class ExtractIntegers 
+{
+    public static void main(String args[])
+    {
+        String str = "neeraj12dheeraj40satish50";
+        
+       // str = str.replaceAll("\\D+"," ");  //replace all non-digit number with single space 
+        
+        str =str.replaceAll("[^\\d+]"," ");  //replace all non-digit number with spaces 
+        
+        str=str.replaceAll("\\s+"," ");  //remove all consecutive white space with single space 
+        
+        // str = str.replaceAll(" +", " ");  //remove all consecutive white space with single space 
+         
+         str = str.trim();  //remove all leading & trailing spaces from string  
+        
+        System.out.println(str);  
+    }
+}

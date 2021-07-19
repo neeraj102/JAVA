@@ -1,0 +1,59 @@
+//In this example we can see that Vector always increase its size 2 times 
+
+import java.util.Vector;
+public class VectorExample1 
+{  
+       public static void main(String args[]) 
+       {  
+          //Create an empty vector with initial capacity 4  
+          Vector<String> vec = new Vector<String>(4);  
+          
+           //Adding elements to a vector
+          
+          vec.add("Tiger");  
+          vec.add("Lion");
+          vec.add("Dog");  
+          vec.add("Elephant"); 
+          
+          //Check size and capacity  
+          System.out.println("Size is: "+vec.size());  
+          System.out.println("Default capacity is: "+vec.capacity());  
+          
+          //Display Vector elements  
+          System.out.println("Vector element is: "+vec);  
+          
+          //Again add elements 
+          vec.add("Rat");  
+          vec.add("Cat");  
+          vec.add("Deer");  
+          
+          //Again check size and capacity after two insertions  
+          System.out.println("Size after addition: "+vec.size());  
+          System.out.println("Capacity after addition is: "+vec.capacity());  
+          
+          //Display Vector elements again  
+          System.out.println("Elements are: "+vec);  
+          
+          //Again add elements 
+          vec.add("Rat");  
+          vec.add("Cat");  
+          vec.add("Deer");  
+          
+          //Again check size and capacity after three insertions  
+          System.out.println("Size after addition: "+vec.size());  
+          System.out.println("Capacity after addition is: "+vec.capacity());  
+          
+          //Display Vector elements again  
+          System.out.println("Elements are: "+vec);  
+          
+          
+       }
+}
+          
+          
+          
+          
+          
+          
+          
+          

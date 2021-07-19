@@ -1,0 +1,99 @@
+import java.util.*;
+class MyLinkedList
+{
+    public static void main(String args[])
+    {
+        LinkedList<Integer> ll=new LinkedList<>(); //create LinkedList
+        
+        ll.add(11);  //add elements into LinkedList
+        ll.add(19);
+        ll.add(10);
+        
+        System.out.println(ll); //print all elements of LinkedList
+        
+        System.out.println("size of linkedlist: "+ll.size()); 
+        
+        ll.add(1,20); //add element at index 1
+        System.out.println(ll);
+        
+        ll.addFirst(13);  //add element at begining of LinkedList
+        System.out.println(ll);
+        
+        ll.addLast(18);  //add lement at last of LinkedList
+        System.out.println(ll); 
+        
+        System.out.println("19 is present in LinkedList: "+ll.contains(19));  
+        //it checks that element is present in list or not
+         //If it contains then return True otherwise return False
+         
+        ll.set(2,55); //set(index,element) update element of index 2 
+        System.out.println("Updated lements of list : "+ll);
+        
+        //convert LinkedList into array 
+        Integer arr[]=new Integer[ll.size()]; //create an array 
+        ll.toArray(arr);  //pass that array as argument 
+        
+        for(Integer e:arr)   //print using for-each loop 
+        {
+            System.out.print(" "+e);
+        }
+        System.out.println();
+        
+        
+         
+        System.out.println("Find 3rd index element: "+ll.get(3)); 
+        //get(index) method print element present at index Number
+     
+        System.out.println("Print first element: "+ll.getFirst()); 
+         //return first elemnt of list 
+         
+        System.out.println("Print last element: "+ll.getLast());
+          //return last lement of list 
+          
+        System.out.println("Print index of 19: "+ll.indexOf(19));
+          //it finds index of element 
+          
+        System.out.println("Print first element : "+ll.peek()); //return first lement
+         
+        System.out.println("Print first element: "+ll.peekFirst()); //return first element
+          
+        System.out.println("Print last element: "+ll.peekLast()); //return last element
+         
+        ll.poll();  //retrieve and removes first Element 
+        System.out.println("Element after removing first element: "+ll);
+        
+        ll.pollFirst();  //removes first Element 
+        System.out.println("Element after removing first element: "+ll);
+        
+        ll.pollLast();  //removes first Element 
+        System.out.println("Element after removing last element: "+ll);
+        
+        ll.removeFirst();  //or ll.remove()
+        System.out.println("Element after removing first elemnt: "+ll);
+        //It removes 1st elementt of list
+        
+        ll.removeLast();  //remove last element of list 
+        System.out.println("Element after removing last element: "+ll);
+        
+        LinkedList<Integer> aa=new LinkedList<>(); //create new LinkedList
+        
+        aa.add(10);
+        aa.add(20);
+        aa.add(30);
+        
+        ll.addAll(aa);  //add all ements of aa into ll LinkedList
+        System.out.println("List after adding new LinkedList: "+ll);
+        
+        LinkedList<Integer> toRemove=new LinkedList<>();
+        toRemove.add(20);
+        toRemove.add(30);
+        
+        ll.removeAll(toRemove);  //remove multiple elements of LinkedList
+        System.out.println("Elements after removing elements: "+ll);
+        
+    
+        ll.clear();
+        System.out.println("Elements after clearing all elements: "+ll);
+        
+    }
+}

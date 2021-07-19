@@ -1,0 +1,29 @@
+//Reverse a string 
+
+
+class Solution {
+    static String revStr(String S) {
+        // code 
+     /*
+        String str="";
+        for(int i=S.length()-1;i>=0;i--)
+        {
+            str = str + S.charAt(i);
+         }
+         return str;
+       */
+       
+       //One line code 
+       return new StringBuffer(S).reverse().toString();
+         
+         /*Two line code
+         StringBuffer sb =new StringBuffer(S);
+         return sb.reverse().toString();
+         */
+         
+         /*Two line code 
+         StringBuilder sb =new StringBuilder(S);
+         return sb.reverse().toString();
+         */
+    }
+}

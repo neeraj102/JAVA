@@ -1,0 +1,62 @@
+//Check that matrix is Identity matrix 
+/*" A matrix is said to be an identity matrix if it is a square matrix in which elements 
+of principle diagonal(left diagonal) are ones, and the rest of the elements are zeroes"
+
+Contions for Identity matrix: 
+1. Number of rows and columns must be equal(For square matrix)
+2. Left diagonal elements must be equal to 1 
+3. Except left diagonal elements all elements must be zero  */
+
+
+class IdentityMat 
+{
+    public static void main(String args[])
+    {
+        int rows,cols;
+        boolean flag=true;
+        
+        int mat[][]={{1,0,0},{0,1,0},{0,0,1}};
+        
+        //Calculates the number of rows and columns present in the given matrix 
+        rows=mat.length;
+        cols=mat[0].length;
+        
+         //Checks whether given matrix is a square matrix or not    
+        if(rows != cols)
+        {
+            System.out.println("Matrix is not Identity matrix");
+            
+        }
+        else
+        {   //Checks if diagonal elements are equal to 1 and rest of elements are 0  
+        
+          for(int i=0;i<rows;i++)
+          {
+            for(int j=0;j<cols;j++)
+            {
+                if((i==j) && mat[i][j] != 1)    //diagonal elements 
+                { 
+                    flag=false;
+                    break;
+                }
+                
+                if((i != j) && mat[i][j] != 0)     //rest elements
+                {
+                    flag=false;
+                    break;
+                }
+            }
+            
+          }
+        }
+        
+        if(flag)
+            System.out.println("Matrix is Identity matrix");
+        else 
+            System.out.println("Matrix is not Identity matrix");
+        
+        
+        
+        
+    }
+}

@@ -1,0 +1,36 @@
+//
+//Methods of StringBuilder 
+
+class StrBuild 
+{
+    public static void main(String args[])
+    {
+        StringBuilder sb = new StringBuilder("Hello");    //create string buffer with "Hello" string  
+        
+        sb.append("Neeraj");
+        System.out.println(sb);
+        
+        sb.insert(5,"PUBG");
+        System.out.println(sb);
+        
+        sb.replace(3,7,"java");
+        System.out.println(sb);
+        
+        sb.delete(1,4);
+        System.out.println(sb);
+        
+        int capacity = sb.capacity();
+        System.out.println("Capacity of String is: "+capacity);
+        
+        int length = sb.length();
+        System.out.println("Length of string is: "+length);
+        
+        System.out.println("Character at specified index 3 positiion: "+sb.charAt(3));
+        
+        sb.reverse();
+        System.out.println(sb);
+        
+        
+        
+    }
+}

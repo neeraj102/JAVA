@@ -1,0 +1,49 @@
+//Find reciprocal of string 
+class ReciprocalOfStr 
+{
+    public static void main(String args[])
+    {
+        String s = "Neeraj";
+        String reci="";
+        
+        for(int i=0;i<s.length();i++)
+        {
+           char ch = s.charAt(i);
+           char temp;
+            
+            if(ch>='a' && ch<='z')
+            {
+              temp = (char)( (int)'z' - (int)ch + (int)'a');
+            }
+            else
+            {
+              temp = (char)( (int)'Z' - (int)ch + (int)'A');
+            }
+              
+            reci = reci + temp;
+        }
+        
+        System.out.println("Reciprocal of string is: "+reci);
+        
+        
+        //OR  //Fast way to execute in less time  
+        
+        StringBuilder reciprocal = new StringBuilder();  //StringBuilder is faster than String
+         
+         for(int i=0;i<s.length();i++)
+         {
+             char ch=s.charAt(i);
+             if(ch>='a' && ch<='z')
+               ch= (char)('z' - ch + 'a');
+               else 
+               ch= (char)('Z' - ch + 'A');
+               
+               
+               reciprocal.append(ch);
+         }
+         
+          System.out.println("Teciprocal of string is: "+reciprocal.toString());
+         
+        
+    }
+}

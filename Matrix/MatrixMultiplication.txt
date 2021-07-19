@@ -1,0 +1,36 @@
+//Multiplication of Matrix 
+//Condition: Multiply two matrix if "No. of columns of 1st matrix is equal to No. of rows of 2nd matrix" 
+//After multiplication result matrix rows will be rows of Mat1 and columns will be columns of Mat2 
+class MatrixMult
+{
+    public static void main(String args[])
+    {
+        int mat1[][]={{1,5,2},{3,0,1},{2,4,3}};  //Matrix 1  
+        int mat2[][]={{4,1},{1,6},{3,1}};       //Matrix 2 
+        
+        //Create matrix to store multiplied values of Mat1 & Mat1  
+        
+        int mult[][] = new int[3][2];  //(3x3) x (3x2) = 3x2 
+                                       //Mat1  x Mat2  = mult  
+        for(int i=0;i<3;i++)
+        {
+            for(int j=0;j<2;j++)
+            {
+                for(int k=0;k<3;k++)
+                {
+                    mult[i][j] = mult[i][j] + (mat1[i][k] * mat2[k][j]);
+                }
+            }
+        }
+        
+        for(int i=0;i<3;i++)
+        {
+            for(int j=0;j<2;j++)
+            {
+                System.out.print(mult[i][j]+" ");
+            }
+            System.out.println();
+        }
+        
+    }
+}

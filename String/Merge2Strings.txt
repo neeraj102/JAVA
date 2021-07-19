@@ -1,0 +1,25 @@
+/*Merge two strings, merge them alternatively i.e. the first character of S1 
+then the first character of S2 and so on till the strings end.
+*/
+class Merge2Strings
+{
+    public static void main(String args[])
+    {
+        String str1 ="Hello";
+        String str2 ="Neeraj";
+        int i=0,j=0;
+        String s ="";
+        
+        for( i=0,j=0; i<str1.length() && j<str2.length(); i++,j++)
+            s = s + str1.charAt(i) + str2.charAt(j);
+            
+        while(i<str1.length())
+         s = s + str1.charAt(i++);
+         
+        while(j<str2.length())
+         s = s + str2.charAt(j++);
+        
+        System.out.println(s);
+        
+    }
+}

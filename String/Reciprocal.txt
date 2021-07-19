@@ -1,0 +1,18 @@
+//java program to find Reciprocal(Front-Back Transformation) of character 
+/* Replace all the alphabets with the alphabets occuring at the same position when counted in reverse order of alphabets. 
+For example, 'a' would be replaced by 'z', 'b' by 'y', 'c' by 'x' and so on. */
+
+//Just use this formula to find reciprocal of characters 
+//Reciprocal(ch) = ASCII(‘Z’) – ASCII(ch) + ASCII(‘A’)
+class A 
+{
+    public static void main(String args[])
+    {
+        char ch = 'a';
+        
+        char reciprocal = (char)( (int)'z' - (int)ch + (int)'a' );
+        
+        System.out.println("Reciprocal is: "+reciprocal);
+        
+    }
+}

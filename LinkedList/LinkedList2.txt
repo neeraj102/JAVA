@@ -1,0 +1,25 @@
+//create linked list- example of List,LinkedList,Iterator package 
+
+import java.util.List;          // for List 
+import java.util.LinkedList;   //for LinkedList
+import java.util.Iterator;    //for Iterator  
+
+class Lst 
+{
+    public static void main(String args[])
+    {
+        List<String> ll=new LinkedList<>();
+        ll.add("neerak");
+        ll.add("kalu");
+        
+        //Iterator method to print elements 
+        // iterator() method returns an iterator to access all elements of the Collection. 
+        Iterator itr=ll.iterator();
+        while(itr.hasNext())
+        {
+            System.out.print(" "+itr.next());
+        }
+        
+        System.out.println(ll);
+    }
+}

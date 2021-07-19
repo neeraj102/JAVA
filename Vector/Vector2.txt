@@ -1,0 +1,27 @@
+//implement vector 
+import java.util.*;
+class Vec 
+{
+    public static void main(String args[])
+    {
+        Vector<Integer> vec=new Vector<Integer>();
+        
+        //Add elements using add() method List 
+        vec.add(10);
+        vec.add(20);
+        vec.add(30);
+        vec.add(40);
+        
+        //Add elements using addElement() method of Vector 
+        vec.addElement(50);
+        vec.addElement(60);
+        vec.addElement(70);
+        
+        System.out.println("Elements are: "+vec);
+        
+        
+        
+        
+    }
+    
+}

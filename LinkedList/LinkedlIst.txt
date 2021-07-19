@@ -1,0 +1,79 @@
+//create linked list without using collection framwork
+//implement linkedlist by yourself
+public class MyLinkedList 
+{
+    
+    //implement linkedlist
+    
+      Node head;     //First node of linkedlist
+      
+      //now make functions of linkedlist
+      //1. Add() function 
+      void add(int data)
+      {
+          Node toAdd = new Node(data);
+          
+          //if list is empty
+          if(head == null)   
+          {
+              head = toAdd;
+              return;
+          }
+          
+          //If list is not empty then traverse 
+          Node temp=head;
+          while(temp.next != null)
+          {
+              temp=temp.next;
+          }
+          
+          temp.next=toAdd;
+          
+      }
+    
+    //2. isEmpty() function 
+      boolean isEmpty()
+      {
+          if(head == null)
+          {
+              return true;
+          }
+          else 
+          {
+              return false;
+          }
+      }
+      //or 
+    /* boolean isEmpty()
+       {
+           return head == null;
+       }
+    */
+    
+    //3. print() function 
+     void print()
+     {
+         Node temp=head;
+         while(temp != null)
+         {
+             System.out.print(temp.data+" ");
+             temp=temp.next;
+         }
+     }
+     
+    
+    //create Node class 
+    //take static class so that any one can reference from outside
+    static class Node
+    {
+        int data;   //data of node 
+        Node next;  
+        
+        public Node(int data)    //Constructor to take input data 
+        {
+            this.data=data;
+            next=null;
+            
+        }
+    }
+    

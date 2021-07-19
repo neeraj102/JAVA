@@ -1,0 +1,35 @@
+//Count types of Characters in String 
+class CountChar 
+{
+    public static void main(String args[])
+    {
+        String s = "@#$1234 ajdh jAJ HG HD";
+        
+        int uppcase=0;
+        int lowcase=0;
+        int special=0;
+        int number=0;
+        int space=0;
+        
+        for(int i=0;i<s.length();i++)
+        {
+            char ch = s.charAt(i);
+            if(ch >= 'A' && ch <= 'Z')
+              uppcase++;
+              else if(ch >= 'a' && ch <= 'z')
+              lowcase++;
+              else if(ch >= '0' && ch <= '9')
+               number++;
+               else if(ch == ' ')
+               space++;
+               else 
+               special++;
+        }
+        
+        System.out.println("Number of Upper Case is: "+uppcase);
+        System.out.println("Number of Lower case is: "+lowcase);
+        System.out.println("Number of Numeric symble is: "+number);
+        System.out.println("Number of Special symble is: "+special);
+        System.out.println("Number of Spacees is: "+space);
+    }
+}

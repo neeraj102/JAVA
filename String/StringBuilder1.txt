@@ -1,0 +1,21 @@
+//Create StringBuilder --- types of StringBuilder() constructor 
+//StringBuilder() constructor creates an empty string buffer 
+//StringBuilder(String s) constructor creates a string buffer with specified string 
+//StringBuilder(int capacity) constructor creates a string buffer with specified capacity 
+class StrBuild 
+{
+    public static void main(String args[])
+    {
+        //1. StringBuilder() constructor 
+        StringBuilder sb1 = new StringBuilder();   
+        System.out.println("String is: "+sb1);
+        
+        //2. StringBuilder(String str)
+        StringBuilder sb2 = new StringBuilder("hello");
+        System.out.println(sb2);
+        
+        //3. StringBuilder(int capacity)
+        StringBuilder sb3 = new StringBuilder(6);
+        System.out.println(sb3.capacity());
+    }
+}

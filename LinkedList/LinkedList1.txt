@@ -1,0 +1,37 @@
+//create LinkedList- example of addAll() method, removeAll() method
+//1. addAll()-it adds all the elements of a specified Collection to the another Collection
+//2. removeAll()-it remove all elements of a speccified Collection from another Collection
+
+import java.util.*;
+class Lst 
+{
+    public static void main(String args[])
+    {
+        //Create LinkedList of fruits 
+        List<String> fruits = new LinkedList<>();
+        fruits.add("mango");
+        fruits.add("guava");
+        fruits.add("graps");
+        fruits.add("berry");
+        
+        //Create LinkedList of vetables 
+        List<String> vegitables = new LinkedList<>();
+        vegitables.add("carrat");
+        vegitables.add("onion");
+        vegitables.add("tomato");
+        vegitables.add("potato");
+        
+        //Adding all elements of vegitables(Collection) into fruits(Collection)  
+        fruits.addAll(vegitables);
+        System.out.println(fruits);
+        
+        //Output: [mango, guava, graps, berry, carrat, onion, tomato, potato]
+        
+        
+        //Removing all elements of vegitables(Collection) from fruits(Collection)
+        fruits.removeAll(vegitables);
+        System.out.println(fruits);
+        
+        //Output: [mango, guava, graps, berry]
+    }
+}
