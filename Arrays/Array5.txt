@@ -1,0 +1,31 @@
+//Find Second smallest element in array 
+import java.util.Arrays;
+class Array5
+{
+    public static void main(String args[])
+    {
+        int arr[] = {4,3,5,2,1,6,7,8};
+       //First Way 
+        Arrays.sort(arr);
+        System.out.println("Second smallest element is: "+arr[1]);
+        
+        //Second Way -- Sort in ascending order  
+        int temp;
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=i+1;j<arr.length;j++)
+            {
+                if(arr[i] > arr[j]) //Sort in ascending
+                { 
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+             if(i==1)
+                break;
+        }
+        System.out.println("Second smallest element is: "+arr[1]);
+        
+    }
+}

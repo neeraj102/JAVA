@@ -1,0 +1,22 @@
+//Insert an element into an array at any index position 
+class Array10
+{
+    public static void main(String args[])
+    {
+        int arr[] = {10,20,30,40,50,60,70};
+        int index_pos = 5; //insert at this index position
+        int element = 100; //insert this element
+        
+        for(int i=arr.length-1; i>index_pos ;i--)
+        {
+            arr[i] = arr[i-1];    //Right Shift 
+        }
+        arr[index_pos] = element; 
+        
+        System.out.println("After inserting new element, new array is:");
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+}

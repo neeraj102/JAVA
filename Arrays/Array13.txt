@@ -1,0 +1,19 @@
+// Sort the ArrayList
+import java.util.Collections;
+import java.util.ArrayList;
+class Array13 
+{
+    public static void main (String[] args) {
+        
+        ArrayList<String> al = new ArrayList<String>();
+        al.add("Geeks");
+        al.add("Friends");
+        al.add("Dear");
+        al.add("Is");
+        al.add("Superb");
+        //Sort the elements of ArrayList in ascending order 
+        Collections.sort(al); 
+        
+        System.out.println("List: "+al);
+    }
+}

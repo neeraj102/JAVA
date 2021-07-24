@@ -1,0 +1,28 @@
+//Sort an array using Arrays.sort() method
+import java.util.Arrays;
+class Array12 
+{
+    public static void main(String args[])
+    {
+        int arr[] = {30,10,40,80,50,20,60,70};
+        //Sort complete array 
+         System.out.println("Sort the complete array: ");
+        Arrays.sort(arr);
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+        
+        //Sort the subarray 
+        int arr1[] = {30,10,40,80,50,20,60,70};
+        System.out.println("Sort the Subarray: ");
+        
+        Arrays.sort(arr1,1,5);
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.print(arr1[i]+" ");
+        }
+        
+    }
+}

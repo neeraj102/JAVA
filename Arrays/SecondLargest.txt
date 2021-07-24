@@ -1,0 +1,29 @@
+//Find second largest element in array 
+//Array can contain duplicate elements 
+class SecondLargest
+{
+    public static void main(String args[])
+    {
+        int arr[]={12,35,1,10,34,1};
+        
+        int largest=0, slargest=0;
+        
+        //Find largest eleement
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]>largest)
+            largest=arr[i];
+        }
+        
+        //Find second largest element 
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]>slargest && arr[i]!=largest)
+            slargest=arr[i];
+        }
+        
+        System.out.println("largest element is: "+largest);
+        System.out.println("Second largest element is: "+slargest);
+        
+    }
+}

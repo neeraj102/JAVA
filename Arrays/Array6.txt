@@ -1,0 +1,32 @@
+//Find duplicate element in array - Using Set Interface & Brute Force Method  
+import java.util.Set;
+import java.util.HashSet;
+class Array6 
+{
+    public static void main(String args[])
+    {
+        int arr[] = {3,5,4,3,2,2,1,5};
+        System.out.print("Duplicate elements are: ");
+        
+        //1st way - Using Set Interface
+        Set<Integer> st = new HashSet<Integer>();
+        for(int no : arr)
+        {
+            if(st.add(no) == false)
+            System.out.print(no+" ");
+        }
+        
+        System.out.println();
+        
+        //2nd way- Using Brute Force Method 
+        System.out.print("Duplicate elements are: ");
+        for(int i=0;i<arr.length-1;i++)
+        {
+            for(int j=i+1;j<arr.length;j++)
+            {
+                if((arr[i] == arr[j]) && (i!=j))
+                System.out.print(arr[j]+" ");
+            }
+        }
+    }
+}
